@@ -44,7 +44,10 @@
     {#if M.size > 0}
       {#each [...M.entries()] as row, r}
         {#each [...M.get(r + 1)] as val, c}
-          <input type="checkbox" checked={val}>
+          <input
+            disabled=true
+            type="checkbox"
+            checked={val}>
         {/each}
       {/each}
     {/if}
